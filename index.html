@@ -1,230 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colotti's Pressure Washing Plus | Lenawee, Hillsdale & Jackson County</title>
-  <meta name="description" content="Colotti's Pressure Washing Plus provides pressure washing, lawn care, handyman work, and painting in Lenawee, Hillsdale, and Jackson County. Call or text 517-425-7135.">
-  <meta name="keywords" content="pressure washing Lenawee County, pressure washing Hillsdale County, pressure washing Jackson County, house washing, driveway cleaning, lawn care, handyman, painting">
-  <meta name="robots" content="index, follow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colotti's Pressure Washing Plus | Pressure Washing in Lenawee, Hillsdale & Jackson County</title>
+  <meta name="description" content="Colotti's Pressure Washing Plus provides pressure washing, house washing, driveway cleaning, lawn care, handyman work, and painting in Lenawee, Hillsdale, and Jackson County. Call or text 517-425-7135." />
+  <meta name="keywords" content="pressure washing Lenawee County, pressure washing Hillsdale County, pressure washing Jackson County, house washing, driveway cleaning, deck cleaning, lawn care, handyman, painting" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://colottipwp.com/" />
+
+  <meta property="og:title" content="Colotti's Pressure Washing Plus" />
+  <meta property="og:description" content="Pressure washing and exterior services for Lenawee, Hillsdale, and Jackson County." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://colottipwp.com/" />
+  <meta property="og:image" content="https://colottipwp.com/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Colotti's Pressure Washing Plus" />
+  <meta name="twitter:description" content="Pressure washing and exterior services for Lenawee, Hillsdale, and Jackson County." />
+  <meta name="twitter:image" content="https://colottipwp.com/og-image.jpg" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-B9SNE93WDT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Colotti's Pressure Washing Plus",
+    "url": "https://colottipwp.com/",
+    "telephone": "+1-517-425-7135",
+    "email": "jacolotti@gmail.com",
+    "description": "Pressure washing, house washing, driveway cleaning, lawn care, handyman work, and painting in Lenawee, Hillsdale, and Jackson County.",
+    "areaServed": [
+      "Lenawee County, MI",
+      "Hillsdale County, MI",
+      "Jackson County, MI"
+    ],
+    "serviceType": [
+      "Pressure Washing",
+      "House Washing",
+      "Driveway Cleaning",
+      "Deck Cleaning",
+      "Lawn Care",
+      "Handyman Work",
+      "Painting"
+    ]
+  }
+  </script>
+
   <style>
     :root{
       --navy:#1f2a44;
       --blue:#2d5da8;
+      --green:#2f9e44;
       --light:#f4f6fa;
-      --text:#1d2430;
       --white:#ffffff;
-      --accent:#e9f1ff;
+      --text:#1c2430;
+      --muted:#5f6b7a;
+      --accent:#eaf2ff;
+      --border:#dce4ef;
+      --shadow:0 8px 24px rgba(0,0,0,.08);
+      --radius:16px;
+      --max:1120px;
     }
-    *{box-sizing:border-box}
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       font-family:Arial, sans-serif;
-      color:var(--text);
       background:var(--light);
-      line-height:1.55;
+      color:var(--text);
+      line-height:1.6;
     }
+
+    a{
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
     .topbar{
       background:var(--navy);
       color:var(--white);
-      padding:12px 20px;
       text-align:center;
+      padding:12px 16px;
       font-weight:bold;
+      font-size:.97rem;
     }
+
     .topbar a{
       color:var(--white);
       text-decoration:none;
     }
-    header{
-      background:linear-gradient(rgba(31,42,68,.82), rgba(31,42,68,.82)),
-                 url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      color:var(--white);
-      padding:70px 20px 80px;
-      text-align:center;
+
+    .navbar{
+      background:var(--white);
+      border-bottom:1px solid var(--border);
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
-    .wrap{
-      max-width:1100px;
+
+    .nav-wrap{
+      max-width:var(--max);
       margin:0 auto;
-    }
-    h1{
-      font-size:clamp(2rem, 5vw, 3.5rem);
-      margin:0 0 15px;
-    }
-    h2{
-      font-size:clamp(1.6rem, 3vw, 2.2rem);
-      margin:0 0 18px;
-      color:var(--navy);
-      text-align:center;
-    }
-    .sub{
-      max-width:800px;
-      margin:0 auto 24px;
-      font-size:1.1rem;
-    }
-    .cta-row{
       display:flex;
-      gap:14px;
-      justify-content:center;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 20px;
       flex-wrap:wrap;
-      margin-top:25px;
     }
+
+    .brand{
+      font-size:1.05rem;
+      font-weight:700;
+      color:var(--navy);
+      text-decoration:none;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:var(--text);
+      font-weight:600;
+      font-size:.95rem;
+    }
+
     .btn{
       display:inline-block;
-      padding:14px 24px;
-      border-radius:8px;
-      font-weight:bold;
+      padding:14px 22px;
+      border-radius:10px;
       text-decoration:none;
-      transition:.2s ease;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+      transition:.18s ease;
     }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
     .btn-primary{
-      background:#3ba55d;
+      background:var(--green);
       color:#fff;
     }
+
     .btn-secondary{
       background:#fff;
       color:var(--navy);
+      border:1px solid var(--border);
     }
-    .btn:hover{transform:translateY(-1px)}
+
+    .hero{
+      background:
+        linear-gradient(rgba(31,42,68,.82), rgba(31,42,68,.82)),
+        url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=80") center/cover no-repeat;
+      color:var(--white);
+      padding:72px 20px 86px;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .tag{
+      display:inline-block;
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:.93rem;
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0 0 16px;
+      font-size:clamp(2.2rem, 5vw, 3.7rem);
+      line-height:1.15;
+    }
+
+    .hero p{
+      font-size:1.08rem;
+      max-width:720px;
+      margin:0 0 24px;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .hero-points{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      color:#e8eefb;
+      font-weight:600;
+      font-size:.95rem;
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,.97);
+      color:var(--text);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card h2{
+      margin:0 0 12px;
+      font-size:1.45rem;
+      color:var(--navy);
+    }
+
+    .hero-card ul{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
     section{
-      padding:60px 20px;
+      padding:64px 20px;
     }
+
+    .section-title{
+      text-align:center;
+      margin:0 0 12px;
+      color:var(--navy);
+      font-size:clamp(1.7rem, 3vw, 2.3rem);
+    }
+
+    .section-sub{
+      text-align:center;
+      max-width:820px;
+      margin:0 auto 28px;
+      color:var(--muted);
+    }
+
     .grid{
       display:grid;
       gap:22px;
     }
+
     .services{
-      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-      margin-top:25px;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
     }
+
     .card{
       background:var(--white);
-      border-radius:14px;
+      border-radius:var(--radius);
       padding:24px;
-      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      box-shadow:var(--shadow);
+      border:1px solid #eef2f7;
     }
+
     .card h3{
       margin-top:0;
+      margin-bottom:10px;
       color:var(--navy);
     }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
     .trust{
       background:var(--accent);
     }
+
     .trust-grid{
-      grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-      margin-top:25px;
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
     }
-    .photo-grid{
-      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-      margin-top:25px;
+
+    .areas{
+      grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
     }
+
+    .gallery{
+      grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+    }
+
     .photo{
-      background:var(--white);
-      border-radius:14px;
       overflow:hidden;
-      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      border-radius:var(--radius);
+      background:var(--white);
+      box-shadow:var(--shadow);
     }
+
     .photo img{
       width:100%;
       height:220px;
       object-fit:cover;
-      display:block;
     }
+
     .photo p{
       margin:0;
       padding:14px;
-      font-weight:bold;
       text-align:center;
+      font-weight:700;
+      color:var(--navy);
     }
-    .contact-box{
-      max-width:800px;
-      margin:25px auto 0;
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:start;
+    }
+
+    .quote-box{
       background:var(--white);
-      border-radius:16px;
-      padding:30px;
-      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
     }
-    .contact-box a{
-      color:var(--blue);
-      text-decoration:none;
-      font-weight:bold;
+
+    .quote-box h3{
+      margin-top:0;
+      color:var(--navy);
     }
+
+    .contact-list p{
+      margin:0 0 12px;
+    }
+
+    form{
+      display:grid;
+      gap:14px;
+    }
+
+    label{
+      font-weight:700;
+      color:var(--navy);
+      margin-bottom:4px;
+      display:block;
+    }
+
+    input, select, textarea{
+      width:100%;
+      padding:13px 14px;
+      border:1px solid #cfd8e4;
+      border-radius:10px;
+      font:inherit;
+      background:#fff;
+    }
+
+    textarea{
+      min-height:130px;
+      resize:vertical;
+    }
+
     .mini{
-      font-size:.96rem;
-      color:#4b5563;
+      color:var(--muted);
+      font-size:.95rem;
     }
-    footer{
+
+    .reviews{
+      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    }
+
+    .review{
+      background:var(--white);
+      border-left:5px solid var(--blue);
+    }
+
+    .faq{
+      max-width:900px;
+      margin:0 auto;
+      display:grid;
+      gap:14px;
+    }
+
+    details{
+      background:var(--white);
+      border-radius:12px;
+      padding:18px 20px;
+      box-shadow:var(--shadow);
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      color:var(--navy);
+    }
+
+    details p{
+      margin:12px 0 0;
+      color:var(--muted);
+    }
+
+    .final-cta{
       background:var(--navy);
       color:var(--white);
       text-align:center;
-      padding:25px 20px;
+      border-radius:22px;
+      padding:40px 24px;
     }
-    ul{
-      padding-left:20px;
-      margin-bottom:0;
+
+    .final-cta h2{
+      margin-top:0;
+      font-size:2rem;
     }
-    .tagline{
-      display:inline-block;
-      background:rgba(255,255,255,.12);
-      padding:8px 14px;
-      border-radius:999px;
-      margin-bottom:18px;
-      font-weight:bold;
+
+    footer{
+      background:#162033;
+      color:#dbe5f2;
+      padding:28px 20px;
+      text-align:center;
+      margin-top:64px;
     }
+
+    footer p{
+      margin:6px 0;
+    }
+
+    .hidden{
+      display:none;
+    }
+
+    @media (max-width:900px){
+      .hero-grid,
+      .split{
+        grid-template-columns:1fr;
+      }
+    }
+
     @media (max-width:700px){
-      header{padding:55px 18px 65px}
-      section{padding:48px 18px}
-      .contact-box{padding:24px}
+      .hero{
+        padding:56px 18px 70px;
+      }
+
+      section{
+        padding:52px 18px;
+      }
+
+      .nav-wrap{
+        padding:12px 16px;
+      }
+
+      .nav-links{
+        gap:12px;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="topbar">
-    Call or Text: <a href="tel:15174257135">517-425-7135</a> &nbsp;|&nbsp;
-    Email: <a href="mailto:jacolotti@gmail.com">jacolotti@gmail.com</a>
+    Call or Text:
+    <a href="tel:15174257135" onclick="gtag('event','phone_click',{event_category:'engagement',event_label:'topbar_phone'});">517-425-7135</a>
+    &nbsp;|&nbsp;
+    Email:
+    <a href="mailto:jacolotti@gmail.com" onclick="gtag('event','email_click',{event_category:'engagement',event_label:'topbar_email'});">jacolotti@gmail.com</a>
   </div>
 
-  <header>
-    <div class="wrap">
-      <div class="tagline">Family Owned & Operated • 9+ Years Experience</div>
-      <h1>Colotti's Pressure Washing Plus</h1>
-      <p class="sub">
-        Pressure washing and exterior services for Lenawee, Hillsdale, and Jackson County.
-        We help homeowners improve curb appeal with reliable, honest service.
-      </p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="tel:15174257135">Call / Text Now</a>
-        <a class="btn btn-secondary" href="#quote">Request a Quote</a>
+  <nav class="navbar">
+    <div class="nav-wrap">
+      <a class="brand" href="#top">Colotti's Pressure Washing Plus</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#areas">Service Area</a>
+        <a href="#gallery">Photos</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#quote">Quote</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="tag">Family Owned • 9+ Years Experience • Local Service</div>
+        <h1>Pressure Washing and Exterior Services You Can Count On</h1>
+        <p>
+          Colotti's Pressure Washing Plus helps homeowners in Lenawee, Hillsdale, and Jackson County
+          improve curb appeal with reliable pressure washing, house washing, driveway cleaning, lawn care,
+          handyman work, and painting.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:15174257135" onclick="gtag('event','phone_click',{event_category:'engagement',event_label:'hero_phone'});">Call / Text Now</a>
+          <a class="btn btn-secondary" href="#quote" onclick="gtag('event','quote_cta_click',{event_category:'engagement',event_label:'hero_quote'});">Request a Free Quote</a>
+        </div>
+
+        <div class="hero-points">
+          <span>✔ Honest communication</span>
+          <span>✔ Local service area</span>
+          <span>✔ Residential exterior cleanup</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Fastest way to get a quote</h2>
+        <ul>
+          <li>Call or text your name and address</li>
+          <li>Send photos if possible</li>
+          <li>Tell us what needs cleaned or repaired</li>
+          <li>We’ll respond as quickly as possible</li>
+        </ul>
+        <div style="margin-top:18px;">
+          <a class="btn btn-primary" href="sms:15174257135" onclick="gtag('event','text_click',{event_category:'engagement',event_label:'hero_text'});">Text for a Quote</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <section>
+  <section id="services">
     <div class="wrap">
-      <h2>Our Services</h2>
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">
+        We focus on practical exterior services that help your property look cleaner, more cared for,
+        and easier to maintain.
+      </p>
+
       <div class="grid services">
         <div class="card">
           <h3>Pressure Washing</h3>
-          <p>Exterior cleaning for siding, concrete, patios, decks, and more.</p>
+          <p>Exterior cleaning for siding, concrete, patios, decks, and other weathered surfaces.</p>
         </div>
         <div class="card">
           <h3>House Washing</h3>
-          <p>Refresh your home's appearance and remove dirt, buildup, and grime.</p>
+          <p>Remove dirt, buildup, and grime to improve your home’s appearance without the guesswork.</p>
         </div>
         <div class="card">
           <h3>Driveways & Walkways</h3>
-          <p>Clean up stained or weathered concrete to improve first impressions.</p>
+          <p>Clean up stained and worn concrete to improve curb appeal and first impressions.</p>
+        </div>
+        <div class="card">
+          <h3>Deck & Patio Cleaning</h3>
+          <p>Refresh outdoor living spaces and remove buildup that makes surfaces look old and neglected.</p>
         </div>
         <div class="card">
           <h3>Lawn Care</h3>
-          <p>General outdoor upkeep to help keep your property looking clean and maintained.</p>
+          <p>General outdoor upkeep to help your property stay neat, presentable, and easier to manage.</p>
         </div>
         <div class="card">
           <h3>Handyman Work</h3>
-          <p>Help with small property improvement and repair jobs around the home.</p>
+          <p>Help with smaller property repair and improvement jobs around the home.</p>
         </div>
         <div class="card">
           <h3>Painting</h3>
-          <p>Interior and exterior painting services to freshen up your space.</p>
+          <p>Interior and exterior painting to freshen up your space and improve overall appearance.</p>
+        </div>
+        <div class="card">
+          <h3>Custom Exterior Cleanup</h3>
+          <p>If your project doesn’t fit neatly in a box, reach out anyway. Many jobs are easier than they look.</p>
         </div>
       </div>
     </div>
@@ -232,23 +589,185 @@
 
   <section class="trust">
     <div class="wrap">
-      <h2>Why Homeowners Choose Us</h2>
+      <h2 class="section-title">Why Homeowners Choose Us</h2>
+      <p class="section-sub">
+        People don’t just want a clean house or driveway. They want someone reliable to show up,
+        communicate clearly, and do solid work.
+      </p>
+
       <div class="grid trust-grid">
         <div class="card">
-          <h3>Local Service Area</h3>
-          <p>Serving Lenawee, Hillsdale, and Jackson County with service-area based scheduling.</p>
+          <h3>Family Owned</h3>
+          <p>Direct service and honest communication from a local family-run business.</p>
         </div>
         <div class="card">
           <h3>Experienced</h3>
-          <p>9+ years of hands-on experience serving local customers.</p>
+          <p>Over 9 years of hands-on experience serving local customers.</p>
         </div>
         <div class="card">
-          <h3>Family Owned</h3>
-          <p>Direct, honest communication and service from a family-run business.</p>
+          <h3>Service Area Focused</h3>
+          <p>Serving Lenawee, Hillsdale, and Jackson County with practical local scheduling.</p>
         </div>
         <div class="card">
           <h3>Strong Reputation</h3>
-          <p>Previously maintained a 4.6-star Google Business rating before profile access issues.</p>
+          <p>Previously held a 4.6-star Google Business rating before profile access issues.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas">
+    <div class="wrap">
+      <h2 class="section-title">Service Area</h2>
+      <p class="section-sub">
+        We serve homeowners in southern Michigan with a focus on dependable local work.
+      </p>
+
+      <div class="grid areas">
+        <div class="card">
+          <h3>Lenawee County</h3>
+          <p>Pressure washing and exterior service for homes and properties throughout the area.</p>
+        </div>
+        <div class="card">
+          <h3>Hillsdale County</h3>
+          <p>Available for house washing, driveway cleaning, lawn care, and related work.</p>
+        </div>
+        <div class="card">
+          <h3>Jackson County</h3>
+          <p>Serving nearby homeowners who need straightforward, reliable exterior help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <h2 class="section-title">Before & After Photos</h2>
+      <p class="section-sub">
+        Replace these placeholders with your real project photos. Real local photos will sell your work
+        better than any fancy wording.
+      </p>
+
+      <div class="grid gallery">
+        <div class="photo">
+          <img src="house-before.jpg" alt="House washing before photo" />
+          <p>House Washing Before</p>
+        </div>
+        <div class="photo">
+          <img src="house-after.jpg" alt="House washing after photo" />
+          <p>House Washing After</p>
+        </div>
+        <div class="photo">
+          <img src="driveway-cleaning.jpg" alt="Driveway cleaning project" />
+          <p>Driveway Cleaning</p>
+        </div>
+        <div class="photo">
+          <img src="deck-cleaning.jpg" alt="Deck cleaning project" />
+          <p>Deck Cleaning</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote">
+    <div class="wrap split">
+      <div class="quote-box">
+        <h3>Request a Quote</h3>
+        <p class="mini">
+          Fill this out and we’ll have what we need to respond faster.
+        </p>
+
+        <form action="https://formspree.io/f/xgonbknl" method="POST" onsubmit="gtag('event','quote_form_submit',{event_category:'lead',event_label:'main_quote_form'});">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required />
+          </div>
+
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" name="phone" required />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" />
+          </div>
+
+          <div>
+            <label for="service">Service Needed</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>Pressure Washing</option>
+              <option>House Washing</option>
+              <option>Driveway / Walkway Cleaning</option>
+              <option>Deck / Patio Cleaning</option>
+              <option>Lawn Care</option>
+              <option>Handyman Work</option>
+              <option>Painting</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="address">Service Address</label>
+            <input id="address" type="text" name="address" />
+          </div>
+
+          <div>
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Tell us what you need cleaned or repaired. The more detail you give, the faster we can help."></textarea>
+          </div>
+
+          <input class="hidden" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="New quote request from Colotti's Pressure Washing Plus" />
+          <input type="hidden" name="_next" value="https://colottipwp.com/thank-you.html" />
+
+          <button class="btn btn-primary" type="submit">Send Quote Request</button>
+        </form>
+      </div>
+
+      <div class="quote-box">
+        <h3>Contact Information</h3>
+        <div class="contact-list">
+          <p><strong>Call / Text:</strong> <a href="tel:15174257135" onclick="gtag('event','phone_click',{event_category:'engagement',event_label:'contact_section_phone'});">517-425-7135</a></p>
+          <p><strong>Email:</strong> <a href="mailto:jacolotti@gmail.com" onclick="gtag('event','email_click',{event_category:'engagement',event_label:'contact_section_email'});">jacolotti@gmail.com</a></p>
+          <p><strong>Service Area:</strong> Lenawee, Hillsdale, and Jackson County</p>
+          <p><strong>Best way to get started:</strong> Text your name, address, and a few photos of the job if you have them.</p>
+        </div>
+
+        <hr style="border:none;border-top:1px solid var(--border);margin:22px 0;" />
+
+        <h3>What to send for faster estimates</h3>
+        <ul style="color:var(--muted);padding-left:18px;margin-bottom:0;">
+          <li>Your name and phone number</li>
+          <li>Property address</li>
+          <li>What area needs cleaned or repaired</li>
+          <li>Photos if available</li>
+          <li>Any timing or scheduling needs</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <h2 class="section-title">What Customers Care About</h2>
+      <p class="section-sub">
+        Add real reviews here as soon as you can. Until then, this section still helps frame what you do well.
+      </p>
+
+      <div class="grid reviews">
+        <div class="card review">
+          <h3>Reliable Communication</h3>
+          <p>Customers want someone who answers, shows up, and keeps things simple.</p>
+        </div>
+        <div class="card review">
+          <h3>Visible Results</h3>
+          <p>The job should look noticeably better when you leave. Photos prove that fast.</p>
+        </div>
+        <div class="card review">
+          <h3>Local Trust</h3>
+          <p>Being family owned and local matters more than polished branding when people need home service work.</p>
         </div>
       </div>
     </div>
@@ -256,42 +775,43 @@
 
   <section>
     <div class="wrap">
-      <h2>Before & After Photos</h2>
-      <p class="sub">Swap these placeholders with your own job photos as soon as possible. Real local photos will do more for you than fancy design ever will.</p>
-      <div class="grid photo-grid">
-        <div class="photo">
-          <img src="house before.jpg" alt="House exterior cleaning example">
-          <p>House Washing Before</p>
-        </div>
-        <div class="photo">
-          <img src="house after.jpg" alt="House exterior cleaning example">
-          <p>House Washing After</p>
-        </div>
-        <div class="photo">
-          <img src="concrete.jpg" alt="Driveway cleaning example">
-          <p>Driveways & Concrete</p>
-        </div>
-        <div class="photo">
-          <img src="deck.jpg" alt="Exterior property improvement example">
-          <p>Deck Washing</p>
-        </div>
-        <div class="photo">
-          <img src="deck 2.jpg" alt="Exterior property improvement example">
-          <p>Deck Washing</p>
-        </div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>What areas do you serve?</summary>
+          <p>We primarily serve Lenawee, Hillsdale, and Jackson County.</p>
+        </details>
+
+        <details>
+          <summary>How do I get a quote?</summary>
+          <p>Call, text, email, or use the quote form. Photos and a service address help a lot.</p>
+        </details>
+
+        <details>
+          <summary>What kinds of jobs do you handle?</summary>
+          <p>Pressure washing, house washing, driveway and walkway cleaning, deck cleaning, lawn care, handyman work, and painting.</p>
+        </details>
+
+        <details>
+          <summary>Do photos help?</summary>
+          <p>Yes. Photos usually make quotes faster and more accurate.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="quote">
+  <section>
     <div class="wrap">
-      <h2>Request a Quote</h2>
-      <div class="contact-box">
-        <p><strong>Call or Text:</strong> <a href="tel:15174257135">517-425-7135</a></p>
-        <p><strong>Email:</strong> <a href="mailto:jacolotti@gmail.com">jacolotti@gmail.com</a></p>
-        <p><strong>Service Area:</strong> Lenawee, Hillsdale, and Jackson County</p>
-        <p><strong>Best way to get started:</strong> Send your name, service address, and a short description of what you need cleaned or repaired.</p>
-        
+      <div class="final-cta">
+        <h2>Need help with your property?</h2>
+        <p style="max-width:720px;margin:0 auto 20px;">
+          Don’t let dirty siding, stained concrete, or small outdoor jobs sit there getting worse.
+          Reach out and get a quote.
+        </p>
+        <div class="cta-row" style="justify-content:center;">
+          <a class="btn btn-primary" href="tel:15174257135" onclick="gtag('event','phone_click',{event_category:'engagement',event_label:'final_cta_phone'});">Call / Text 517-425-7135</a>
+          <a class="btn btn-secondary" href="#quote" onclick="gtag('event','quote_cta_click',{event_category:'engagement',event_label:'final_cta_quote'});">Request a Quote</a>
+        </div>
       </div>
     </div>
   </section>
@@ -300,6 +820,12 @@
     <p><strong>Colotti's Pressure Washing Plus</strong></p>
     <p>Pressure Washing • Lawn Care • Handyman • Painting</p>
     <p>Serving Lenawee, Hillsdale & Jackson County</p>
+    <p>
+      <a href="tel:15174257135" style="color:#fff;" onclick="gtag('event','phone_click',{event_category:'engagement',event_label:'footer_phone'});">517-425-7135</a>
+      &nbsp;|&nbsp;
+      <a href="mailto:jacolotti@gmail.com" style="color:#fff;" onclick="gtag('event','email_click',{event_category:'engagement',event_label:'footer_email'});">jacolotti@gmail.com</a>
+    </p>
   </footer>
+
 </body>
 </html>
